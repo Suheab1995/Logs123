@@ -1,0 +1,15 @@
+name: retrieve-logs 
+on:
+  workflow_run:  # Triggered when a workflow is triggered
+    workflows: ["pr-validation"] # The workflow that triggers this one, can be multiple
+    types:
+      - completed # The logs are available only when the workflow is completed
+
+jobs:
+  retrive_workflow_logs:
+    runs-on: ubuntu-latest
+    name: retrieve_logs
+    steps:
+      - name: retrieve_workflow_logs_action
+        id: retrieve_workflow_logs_action
+        uses: Superbasil3/retrieve-workflow-logs-action@draft
