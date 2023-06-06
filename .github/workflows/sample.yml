@@ -1,0 +1,11 @@
+name: pr-validation 
+on:
+  workflow_dispatch: 
+
+jobs:
+  pr-validation:
+    runs-on: ubuntu-latest
+    name: pr-validation
+    steps:
+      - name: retrieve_workflow_logs_action
+        run: echo "Hello World"
