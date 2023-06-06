@@ -1,6 +1,7 @@
 name: pr-validation 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+  workflow_call: 
 
 jobs:
   pr-validation:
